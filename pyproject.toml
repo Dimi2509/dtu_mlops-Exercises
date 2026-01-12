@@ -39,8 +39,10 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "coverage>=7.11.3",
     "invoke>=2.2.1",
     "mypy>=1.18.2",
+    "pytest>=8.4.2",
     "ruff>=0.14.9",
     "torch>=2.9.1",
 ]
@@ -172,3 +174,7 @@ torch = { index = "pytorch-cuda" }
 name = "pytorch-cuda"
 url = "https://download.pytorch.org/whl/cu128"
 explicit = true
+
+# Used by `coverage` to omit test files from coverage reports
+[tool.coverage.run]
+omit = ["s5_continuous_integration/tests/*"]

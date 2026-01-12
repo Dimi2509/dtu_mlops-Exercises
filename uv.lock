@@ -1259,8 +1259,10 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "coverage" },
     { name = "invoke" },
     { name = "mypy" },
+    { name = "pytest" },
     { name = "ruff" },
     { name = "torch" },
 ]
@@ -1336,8 +1338,10 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "coverage", specifier = ">=7.11.3" },
     { name = "invoke", specifier = ">=2.2.1" },
     { name = "mypy", specifier = ">=1.18.2" },
+    { name = "pytest", specifier = ">=8.4.2" },
     { name = "ruff", specifier = ">=0.14.9" },
     { name = "torch", specifier = ">=2.9.1", index = "https://download.pytorch.org/whl/cu128" },
 ]

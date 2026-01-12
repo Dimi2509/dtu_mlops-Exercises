@@ -178,3 +178,6 @@ tools/to_pdf/**/*.pdf
 
 # vscode
 .vscode/
+
+# wandb
+wandb/
