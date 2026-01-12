@@ -1,0 +1,40 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "CPython 3.12.12",
+  "startedAt": "2026-01-12T09:50:25.111750Z",
+  "program": "C:\\Users\\ivand\\OneDrive\\Uni Studies\\DTU - Masters\\Spring 2026\\02476 - MLOps\\dtu_mlops-Exercises\\s1_development_environment\\exercise_files\\final_exercise\\main.py",
+  "codePath": "s1_development_environment\\exercise_files\\final_exercise\\main.py",
+  "codePathLocal": "s1_development_environment\\exercise_files\\final_exercise\\main.py",
+  "git": {
+    "remote": "https://github.com/Dimi2509/dtu_mlops-Exercises.git",
+    "commit": "87097e103618f912b842aa2db8621b312512469d"
+  },
+  "email": "s253814@dtu.dk",
+  "root": "C:\\Users\\ivand\\OneDrive\\Uni Studies\\DTU - Masters\\Spring 2026\\02476 - MLOps\\dtu_mlops-Exercises",
+  "host": "DIMI-PC",
+  "executable": "C:\\Users\\ivand\\OneDrive\\Uni Studies\\DTU - Masters\\Spring 2026\\02476 - MLOps\\dtu_mlops-Exercises\\.venv\\Scripts\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 5080",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1999496015872",
+      "used": "557474967552"
+    }
+  },
+  "memory": {
+    "total": "66145669120"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 5080",
+      "memoryTotal": "17094934528",
+      "cudaCores": 10752,
+      "architecture": "Blackwell",
+      "uuid": "GPU-9ec09847-fae8-dd43-7beb-a663ac756b1f"
+    }
+  ],
+  "cudaVersion": "13.1",
+  "writerId": "j50zo6ilonvamq2ppkbr2fkx842n0abh"
+}

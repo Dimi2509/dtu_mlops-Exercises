@@ -1,0 +1,67 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            j50zo6ilonvamq2ppkbr2fkx842n0abh:
+                codePath: s1_development_environment\exercise_files\final_exercise\main.py
+                codePathLocal: s1_development_environment\exercise_files\final_exercise\main.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "1999496015872"
+                        used: "557474967552"
+                email: s253814@dtu.dk
+                executable: C:\Users\ivand\OneDrive\Uni Studies\DTU - Masters\Spring 2026\02476 - MLOps\dtu_mlops-Exercises\.venv\Scripts\python.exe
+                git:
+                    commit: 87097e103618f912b842aa2db8621b312512469d
+                    remote: https://github.com/Dimi2509/dtu_mlops-Exercises.git
+                gpu: NVIDIA GeForce RTX 5080
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 10752
+                      memoryTotal: "17094934528"
+                      name: NVIDIA GeForce RTX 5080
+                      uuid: GPU-9ec09847-fae8-dd43-7beb-a663ac756b1f
+                host: DIMI-PC
+                memory:
+                    total: "66145669120"
+                os: Windows-11-10.0.26200-SP0
+                program: C:\Users\ivand\OneDrive\Uni Studies\DTU - Masters\Spring 2026\02476 - MLOps\dtu_mlops-Exercises\s1_development_environment\exercise_files\final_exercise\main.py
+                python: CPython 3.12.12
+                root: C:\Users\ivand\OneDrive\Uni Studies\DTU - Masters\Spring 2026\02476 - MLOps\dtu_mlops-Exercises
+                startedAt: "2026-01-12T09:50:25.111750Z"
+                writerId: j50zo6ilonvamq2ppkbr2fkx842n0abh
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 1
+                - 50
+            "2":
+                - 1
+                - 50
+            "3":
+                - 13
+                - 16
+            "4": 3.12.12
+            "5": 0.23.0
+            "8":
+                - 3
+            "12": 0.23.0
+            "13": windows-amd64
+hyperparams:
+    value:
+        batch_size: 128
+        epochs: 5
+optimizer:
+    value:
+        _target_: torch.optim.Adam
+        betas:
+            - 0.9
+            - 0.999
+        eps: 1e-08
+        lr: 0.005
+        weight_decay: 0
