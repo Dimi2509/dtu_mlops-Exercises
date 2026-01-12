@@ -1,0 +1,7 @@
+defaults:
+  - optimizer: adam
+
+hyperparams:
+  epochs: 5
+  batch_size: 128
+  

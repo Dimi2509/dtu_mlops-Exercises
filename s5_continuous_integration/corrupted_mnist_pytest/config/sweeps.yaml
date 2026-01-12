@@ -1,0 +1,27 @@
+# Set hyperparameters for sweeps which come from hydra config
+program: main.py
+name: sweepDemo
+project: MLOps - WandB
+entity: s253814-danmarks-tekniske-universitet-dtu
+metric:
+  goal: maximize
+  name: train_accuracy # Must match the name of the logged parameter in main.py
+method: bayes
+parameters:
+  hyperparams.batch_size:
+    values: [16, 32, 64, 128]
+  hyperparams.epochs:
+    values: [5, 10, 20]
+  optimizer.lr:
+    distribution: log_uniform_values
+    min: 5e-4
+    max: 1e-1
+  optimizer:
+    values: [adam, sgd]
+
+command:
+  - ${env}
+  - uv
+  - run
+  - s1_development_environment/exercise_files/final_exercise/main.py
+  - ${args_no_hyphens}
