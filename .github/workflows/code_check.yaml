@@ -1,4 +1,4 @@
-name: "Run tests"
+name: "Run code check"
 
 on:
   push:
@@ -26,7 +26,11 @@ jobs:
     - name: Test with ruff
       run: |
         uv run ruff check .
-        
+
     - name: Format with ruff
       run: |
         uv run ruff format .
+
+    - name: Run mypy
+      run: |
+        uv run mypy .

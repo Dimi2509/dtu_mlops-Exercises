@@ -15,5 +15,20 @@ steps:
     'push',
     'europe-west1-docker.pkg.dev/$PROJECT_ID/my-first-repository-2026/artifact-repo-image:latest'
   ]
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: 'Deploy to Cloud Run'
+  args: [
+    'run',
+    'deploy',
+    'gcp-test-app',
+    '--image',
+    'europe-west1-docker.pkg.dev/mlops-exercises-484208/my-first-repository-2026/gcp_test_app:latest',
+    '--region',
+    'europe-west1',
+    '--platform',
+    'managed',
+    # optional argument if you want to inject secrets as environment variables
+    #'--update-secrets=<env-name-in-container>=<secret-name-in-secrets-manager>:latest'
+  ]
 options:
   logging: CLOUD_LOGGING_ONLY

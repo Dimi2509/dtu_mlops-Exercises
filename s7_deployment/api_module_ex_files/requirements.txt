@@ -1,0 +1,5 @@
+# newest version of fastapi and uvicorn as of time of writing
+fastapi==0.121.2
+uvicorn==0.38.0
+transformers==4.57.1
+torch==2.9.1
