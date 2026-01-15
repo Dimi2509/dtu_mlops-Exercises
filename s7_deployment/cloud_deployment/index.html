@@ -2761,26 +2761,20 @@ deploying containers.</p>
 <span class="normal"><a href="#__codelineno-14-11">11</a></span>
 <span class="normal"><a href="#__codelineno-14-12">12</a></span>
 <span class="normal"><a href="#__codelineno-14-13">13</a></span>
-<span class="normal"><a href="#__codelineno-14-14">14</a></span>
-<span class="normal"><a href="#__codelineno-14-15">15</a></span>
-<span class="normal"><a href="#__codelineno-14-16">16</a></span>
-<span class="normal"><a href="#__codelineno-14-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">$PORT</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a>
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
 </span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a>
 </span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span>build-essential<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span>software-properties-common<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span>git<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="k">RUN</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/streamlit/streamlit-example.git<span class="w"> </span>.
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14"></a>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16"></a>
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">"streamlit"</span><span class="p">,</span><span class="w"> </span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"streamlit_app.py"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--server.port=$PORT"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--server.address=0.0.0.0"</span><span class="p">]</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span>git<span class="w"> </span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="k">RUN</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/streamlit/streamlit-example.git<span class="w"> </span>.
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>altair<span class="w"> </span>pandas<span class="w"> </span>streamlit
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">"streamlit"</span><span class="p">,</span><span class="w"> </span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"streamlit_app.py"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--server.port=8080"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--server.address=0.0.0.0"</span><span class="p">]</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 </details>
 <ol>

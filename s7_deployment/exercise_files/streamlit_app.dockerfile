@@ -1,17 +1,14 @@
 FROM python:3.9-slim
 
-EXPOSE $PORT
+EXPOSE 8080
 
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+    git 
 
 RUN git clone https://github.com/streamlit/streamlit-example.git .
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install altair pandas streamlit
 
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=$PORT", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8080", "--server.address=0.0.0.0"]
